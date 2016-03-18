@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SpaceIT</string>
+    <string name="kind_of_place">Kind of Place</string>
+    <string-array name="places_names">
+        <item>Regular User</item>
+        <item>Handicapped</item>
+        <item>Pregnant</item>
+    </string-array>
+</resources>
