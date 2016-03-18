@@ -19,7 +19,7 @@ import com.google.android.gms.common.GoogleApiAvailability;
 
 public class FirstSteps extends AppCompatActivity {
     private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "FirstSteps";
 
     private BroadcastReceiver mRegistrationBroadcastReceiver;
     private ProgressBar mRegistrationProgressBar;
@@ -42,8 +42,11 @@ public class FirstSteps extends AppCompatActivity {
                         PreferenceManager.getDefaultSharedPreferences(context);
                 boolean sentToken = sharedPreferences
                         .getBoolean(QuickstartPreferences.SENT_TOKEN_TO_SERVER, false);
+
+
                 if (sentToken) {
                     mInformationTextView.setText(getString(R.string.gcm_send_message));
+
                 } else {
                     mInformationTextView.setText(getString(R.string.token_error_message));
                 }
