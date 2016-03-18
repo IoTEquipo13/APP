@@ -46,6 +46,7 @@ public class PlatesRegistration extends AppCompatActivity {
         registerUser();
         Intent profile = new Intent(this, Profile.class);
         startActivity(profile);
+
     }
 
     public void registerUser(){
@@ -77,7 +78,6 @@ public class PlatesRegistration extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Log.d("waiting","waiting ...");
                         Log.d("RESPONSE", response.toString());
 
                         // msgResponse.setText(response.toString());

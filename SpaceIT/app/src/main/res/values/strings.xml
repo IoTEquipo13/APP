@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">SpaceIT</string>
     <string name="kind_of_place">Kind of Place</string>
+    <string name="gcm_send_message">Token retrieved and sent to server! You can now use gcmsender to
+        send downstream messages to this app.</string>
+    <string name="registering_message">Generating InstanceID token...</string>
+    <string name="token_error_message">An error occurred while either fetching the InstanceID token,
+        sending the fetched token to the server or subscribing to the PubSub topic. Please try
+        running the sample again.</string>
     <string-array name="places_names">
         <item>Regular User</item>
         <item>Handicapped</item>
         <item>Pregnant</item>
+    </string-array>
+    <string-array name="section_names">
+        <item>Section A</item>
+        <item>Section B</item>
     </string-array>
 </resources>

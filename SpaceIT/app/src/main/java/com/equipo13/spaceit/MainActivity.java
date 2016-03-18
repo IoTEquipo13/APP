@@ -13,8 +13,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-    public void cambiar(View v){
-        Intent login = new Intent(this, FirstSteps.class);
-        startActivity(login);
+    public void cerrar(View v){
+        System.exit(0);
+        Intent salida=new Intent( Intent.ACTION_MAIN); //Llamando a la activity principal
+        finish();
     }
 }
