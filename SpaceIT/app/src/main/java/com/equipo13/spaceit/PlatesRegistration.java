@@ -43,30 +43,9 @@ public class PlatesRegistration extends AppCompatActivity {
 
     public void changeToProfile(View v) {
         plates = platesEdit.getText().toString();
-        JSONObject js = new JSONObject();
-        try {
-            JSONObject jsonobject_zones = new JSONObject();
-            jsonobject_zones.put("0", "Zone1");
-            jsonobject_zones.put("1", "Zone1");
-            jsonobject_zones.put("2", "Zone1");
-            jsonobject_zones.put("3", "Zone1");
-            jsonobject_zones.put("4", "Zone1");
-            jsonobject_zones.put("5", "Zone1");
-            jsonobject_zones.put("6", "Zone1");
-
-            js.put("Plate", plates.toString());
-            js.put("Photo", "No hay u.u");
-            js.put("Name", name.toString());
-            js.put("Mail", mail.toString());
-            js.put("PrefSegment", jsonobject_zones);
-            js.put("Condition", condition.toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        Log.d("json", js.toString());
+        registerUser();
         Intent profile = new Intent(this, Profile.class);
         startActivity(profile);
-
     }
 
     public void registerUser(){
@@ -80,12 +59,12 @@ public class PlatesRegistration extends AppCompatActivity {
             jsonobject_zones.put("4", "Zone1");
             jsonobject_zones.put("5", "Zone1");
             jsonobject_zones.put("6", "Zone1");
-            js.put("Plate", "Expreso");
-            js.put("Photo", "dasdasdas");
-            js.put("Name", "Eric Reyes");
-            js.put("Mail", "eladler@hotmail.com");
+            js.put("Plate", plates.toString());
+            js.put("Photo", "No hay u.u");
+            js.put("Name", name.toString());
+            js.put("Mail", mail.toString());
             js.put("PrefSegment", jsonobject_zones);
-            js.put("Condition", "Normal");
+            js.put("Condition", condition.toString());
         } catch (JSONException e) {
             e.printStackTrace();
         }
